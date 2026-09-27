@@ -19,12 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This licence covers the code and documentation in this repository.
-
-Data obtained from third parties keeps its own terms and citation
-requirements, including sequence data from NCBI and Ensembl, somatic
-mutation calls from TCGA, and any reference genome files downloaded by the
-scripts. Cite the original sources listed in the README when reusing results.
