@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="t d" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace">
+  <title id="t">CRISPR Guide Design — SpCas9 guide RNA design and off-target analysis for TP53</title>
+  <desc id="d">Banner showing the top-ranked guide sequence with its protospacer, seed region, PAM and Cas9 cut site, alongside pipeline statistics.</desc>
+
+  <style>
+    .ttl{fill:#E6EDF3}.sub{fill:#9AA7B4}.dim{fill:#6B7885}
+    .cy{fill:#7FC4DC}.gr{fill:#6FD9A0}.am{fill:#D8B366}
+    .ln{stroke:#FFFFFF;stroke-opacity:.08}
+    .base{fill:#C9D6E2;font-size:17px}
+    .pulse{animation:p 3s ease-in-out infinite}@keyframes p{50%{opacity:.4}}
+    .cut{animation:c 2.6s ease-in-out infinite}@keyframes c{0%,100%{opacity:.5}50%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){.pulse,.cut{animation:none}}
+  </style>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0E13"/><stop offset="1" stop-color="#101820"/>
+    </linearGradient>
+    <linearGradient id="hd" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#131B24"/><stop offset="1" stop-color="#0E141B"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".05"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".015"/>
+    </linearGradient>
+    <filter id="gl" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="330" rx="16" fill="url(#bg)"/>
+  <path d="M16 .5H1184A15.5 15.5 0 0 1 1199.5 16V44H.5V16A15.5 15.5 0 0 1 16 .5Z" fill="url(#hd)"/>
+  <line x1="1" y1="44.5" x2="1199" y2="44.5" stroke="#1E2935"/>
+  <rect x=".5" y=".5" width="1199" height="329" rx="15.5" fill="none" stroke="#1E2935"/>
+
+  <circle cx="28" cy="22" r="5" fill="#D4776E" fill-opacity=".72"/>
+  <circle cx="45" cy="22" r="5" fill="#D8B366" fill-opacity=".72"/>
+  <circle cx="62" cy="22" r="5" fill="#6FBF8A" fill-opacity=".72"/>
+  <text x="88" y="26.5" font-size="12.5" class="dim">mhommii / crispr-guide-design</text>
+  <circle cx="996" cy="22" r="3.5" class="gr pulse"/>
+  <text x="1160" y="26" text-anchor="end" font-size="11.5" class="gr" letter-spacing=".06em">5 / 5 STEPS COMPLETE</text>
+
+  <!-- Title block -->
+  <text x="40" y="96" font-size="30" font-weight="700" class="ttl" letter-spacing=".01em">CRISPR Guide Design</text>
+  <text x="40" y="124" font-size="14" class="sub">SpCas9 guide RNA design and off-target analysis</text>
+  <text x="40" y="146" font-size="13" class="dim">Human TP53 · GRCh38 · chromosome 17</text>
+
+  <g transform="translate(40,170)">
+    <rect x="0" y="0" width="58" height="22" rx="5" fill="#7FC4DC" fill-opacity=".08" stroke="#7FC4DC" stroke-opacity=".3"/>
+    <text x="29" y="15.5" font-size="11" text-anchor="middle" class="cy">Python</text>
+    <rect x="66" y="0" width="82" height="22" rx="5" fill="#7FC4DC" fill-opacity=".08" stroke="#7FC4DC" stroke-opacity=".3"/>
+    <text x="107" y="15.5" font-size="11" text-anchor="middle" class="cy">Biopython</text>
+    <rect x="156" y="0" width="60" height="22" rx="5" fill="#7FC4DC" fill-opacity=".08" stroke="#7FC4DC" stroke-opacity=".3"/>
+    <text x="186" y="15.5" font-size="11" text-anchor="middle" class="cy">NumPy</text>
+    <rect x="224" y="0" width="52" height="22" rx="5" fill="#7FC4DC" fill-opacity=".08" stroke="#7FC4DC" stroke-opacity=".3"/>
+    <text x="250" y="15.5" font-size="11" text-anchor="middle" class="cy">NCBI</text>
+  </g>
+
+  <!-- Target-site diagram: the actual top-ranked guide -->
+  <rect x="556.5" y="68.5" width="604" height="132" rx="10" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity=".1"/>
+  <text x="578" y="90" font-size="10.5" class="cy" letter-spacing=".16em">TOP-RANKED GUIDE · rank 1 of 223</text>
+
+  <g transform="translate(578,124)">
+    <!-- protospacer box -->
+    <rect x="-5" y="-17" width="330" height="25" rx="4" fill="#7FC4DC" fill-opacity=".08" stroke="#7FC4DC" stroke-opacity=".35"/>
+    <!-- PAM box -->
+    <rect x="333" y="-17" width="53" height="25" rx="4" fill="#6FD9A0" fill-opacity=".12" stroke="#6FD9A0" stroke-opacity=".5"/>
+
+    <g class="base">
+      <text x="0">T</text><text x="16">C</text><text x="32">T</text><text x="48">C</text><text x="64">G</text>
+      <text x="80">A</text><text x="96">A</text><text x="112">G</text><text x="128">C</text><text x="144">G</text>
+      <text x="160">C</text><text x="176">T</text><text x="192">C</text><text x="208">A</text><text x="224">C</text>
+      <text x="240">G</text><text x="256">C</text><text x="272">C</text><text x="288">C</text><text x="304">A</text>
+    </g>
+    <g class="gr" font-size="17" font-weight="600">
+      <text x="340">C</text><text x="356">G</text><text x="372">G</text>
+    </g>
+
+    <!-- seed region underline: 12 bases nearest the PAM -->
+    <line x1="123" y1="16" x2="317" y2="16" stroke="#D8B366" stroke-width="2" stroke-opacity=".75"/>
+    <text x="220" y="32" font-size="10.5" text-anchor="middle" class="am">seed · 12 nt</text>
+
+    <!-- Cas9 cut site: 3 bp before the PAM -->
+    <g class="cut">
+      <line x1="277" y1="-30" x2="277" y2="12" stroke="#D4776E" stroke-width="1.6" stroke-dasharray="3 3"/>
+      <path d="M271 -36 L283 -36 L277 -28 Z" fill="#D4776E" filter="url(#gl)"/>
+    </g>
+    <text x="277" y="-42" font-size="10" text-anchor="middle" fill="#D4776E">cut</text>
+
+    <text x="405" y="0" font-size="11" class="dim">PAM</text>
+    <text x="405" y="14" font-size="9.5" class="dim">NGG</text>
+  </g>
+
+  <text x="578" y="186" font-size="11" class="dim">0 off-target sites on chr17 at up to 4 mismatches · 65% GC · cuts 16% into the CDS</text>
+
+  <line x1="40" y1="226.5" x2="1160" y2="226.5" class="ln"/>
+
+  <!-- Stats -->
+  <g transform="translate(40,258)">
+    <text x="0" y="0" font-size="26" font-weight="700" class="ttl">2,860</text>
+    <text x="0" y="22" font-size="11" class="dim">NGG sites in TP53</text>
+
+    <text x="232" y="0" font-size="26" font-weight="700" class="cy">223</text>
+    <text x="232" y="22" font-size="11" class="dim">guides passing filters</text>
+
+    <text x="464" y="0" font-size="26" font-weight="700" class="ttl">10.5M</text>
+    <text x="464" y="22" font-size="11" class="dim">chr17 sites searched</text>
+
+    <text x="696" y="0" font-size="26" font-weight="700" class="gr">7</text>
+    <text x="696" y="22" font-size="11" class="dim">guides with zero off-targets</text>
+
+    <text x="960" y="0" font-size="26" font-weight="700" class="am">93s</text>
+    <text x="960" y="22" font-size="11" class="dim">full search runtime</text>
+  </g>
+</svg>
