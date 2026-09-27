@@ -11,6 +11,7 @@ Output:
   data/<GENE>.fasta  the same sequence in plain FASTA format
 """
 
+import os
 import sys
 import tomllib
 from pathlib import Path
@@ -20,10 +21,15 @@ from Bio import Entrez, SeqIO
 ROOT = Path(__file__).resolve().parent.parent
 config = tomllib.loads((ROOT / "config.toml").read_text())
 
-if "@" not in config["email"]:
-    sys.exit("Put your email in config.toml first (NCBI requires it).")
+# NCBI asks every script that downloads data to identify itself with a
+# contact address. Read it from the environment first so that no real email
+# has to be committed to this public repository.
+email = os.environ.get("NCBI_EMAIL") or config.get("email", "")
+if "@" not in email:
+    sys.exit("Set NCBI_EMAIL in your environment (or edit config.toml) - "
+             "NCBI requires a contact address for downloads.")
 
-Entrez.email = config["email"]
+Entrez.email = email
 gene, organism = config["gene"], config["organism"]
 
 # 1. Find the NCBI Gene record, e.g. TP53 -> Gene ID 7157

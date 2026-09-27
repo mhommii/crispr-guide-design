@@ -11,6 +11,7 @@
 ![Steps](https://img.shields.io/badge/pipeline-5%2F5%20steps-6FD9A0?style=flat-square)
 ![Tests](https://img.shields.io/badge/known--answer%20tests-passing-6FD9A0?style=flat-square)
 ![AI assisted](https://img.shields.io/badge/built%20with-Claude%20Code-D8B366?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-7FC4DC?style=flat-square)
 
 **Designing SpCas9 guide RNAs for a human cancer gene — and checking where else they might cut.**
 
@@ -219,7 +220,7 @@ Reimplementing either from memory would produce numbers that look authoritative 
 ```powershell
 py -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements.txt
-# put your own email in config.toml — NCBI requires one for downloads
+$env:NCBI_EMAIL = "you@example.com"   # NCBI requires a contact address
 
 .venv\Scripts\python.exe steps\01_fetch_gene.py
 .venv\Scripts\python.exe steps\02_find_pam_sites.py

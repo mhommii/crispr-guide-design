@@ -1,8 +1,14 @@
 # Settings for every step. Edit these, then re-run the steps.
 
-# NCBI asks every script that downloads data to identify itself with an email.
-# Put your own email here before running step 1.
-email = "mhommamijazofficial@gmail.com"
+# NCBI asks every script that downloads data to identify itself with a
+# contact address. Prefer the NCBI_EMAIL environment variable so your real
+# address is not committed:
+#
+#   PowerShell:  $env:NCBI_EMAIL = "you@example.com"
+#   bash:        export NCBI_EMAIL="you@example.com"
+#
+# If NCBI_EMAIL is not set, the value below is used instead.
+email = "YOUR_EMAIL_HERE"
 
 # Gene to design guides for (official HGNC symbol) and organism.
 gene = "TP53"
