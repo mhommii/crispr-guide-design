@@ -1,0 +1,8 @@
+Starting candidates: 2,860
+
+  in a coding exon                 keeps    280  (removes  2,580)
+  GC between 40% and 80%           keeps  2,377  (removes    483)
+  no TTTT terminator               keeps  2,622  (removes    238)
+  no run of 5+ identical bases     keeps  2,480  (removes    380)
+
+Passed every filter:  223

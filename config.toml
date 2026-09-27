@@ -1,0 +1,9 @@
+# Settings for every step. Edit these, then re-run the steps.
+
+# NCBI asks every script that downloads data to identify itself with an email.
+# Put your own email here before running step 1.
+email = "mhommamijazofficial@gmail.com"
+
+# Gene to design guides for (official HGNC symbol) and organism.
+gene = "TP53"
+organism = "Homo sapiens"

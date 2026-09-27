@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+# large downloaded references (re-created by the scripts)
+data/*.fa
+data/*.fa.gz
+data/chr*
+data/genome/
+tools/
+results/test_*
