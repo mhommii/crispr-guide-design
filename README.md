@@ -62,8 +62,8 @@ flowchart LR
    5'- T C T C G A A G C G C T C A C G C C C A | C G G -3'
        └──────────── protospacer (20 nt) ─────┘  └ PAM ┘
                        └──── seed (12 nt) ─────┘
-                                      ▲
-                                   cut site
+                                        ▲
+                                     cut site
 ```
 
 | Property | Value |
